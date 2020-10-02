@@ -1,0 +1,380 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*:focus, *:active {
+  outline: none;
+}
+
+aside, nav, footer, header, section {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  font-family: "'Lato', sans-serif";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: "'Lato', sans-serif";
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper, .page {
+  height: 100%;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.score {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  z-index: 50;
+  font-size: 45px;
+  font-weight: bold;
+  border: 3px solid red;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+.row-small {
+  margin-bottom: 61px;
+  padding-top: 1px;
+}
+.row-large {
+  margin-top: 28px;
+}
+
+.scale {
+  background-position: top left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.place {
+  border: 1px solid black;
+  background-color: rgba(15, 155, 155, 0.3);
+  overflow: hidden;
+}
+.place-small {
+  width: 265px;
+  height: 172px;
+}
+.place-large {
+  width: 264px;
+  height: 240px;
+}
+
+.scale-1 {
+  width: 3840px;
+  height: 760px;
+  background-image: url("../img/шкалы/1.png");
+}
+.scale-1 .place-small-1 {
+  margin-left: 36px;
+}
+.scale-1 .place-small-2 {
+  margin-left: 682px;
+}
+.scale-1 .place-small-3 {
+  margin-left: 105px;
+}
+.scale-1 .place-small-4 {
+  margin-left: 0px;
+}
+.scale-1 .place-small-5 {
+  margin-left: 360px;
+}
+.scale-1 .place-small-6 {
+  margin-left: 656px;
+}
+.scale-1 .place-large-1 {
+  margin-left: 0px;
+}
+.scale-1 .place-large-2 {
+  margin-left: 2px;
+}
+.scale-1 .place-large-3 {
+  margin-left: 2px;
+}
+.scale-1 .place-large-4 {
+  margin-left: 270px;
+}
+.scale-1 .place-large-5 {
+  margin-left: 294px;
+}
+.scale-1 .place-large-6 {
+  margin-left: 1px;
+}
+.scale-1 .place-large-7 {
+  margin-left: 1px;
+}
+.scale-1 .place-large-8 {
+  margin-left: 4px;
+}
+.scale-1 .place-large-9 {
+  margin-left: 4px;
+}
+.scale-1 .place-large-10 {
+  margin-left: 3px;
+}
+.scale-1 .place-large-11 {
+  margin-left: 5px;
+}
+.scale-1 .place-large-12 {
+  margin-left: 11px;
+}
+.scale-1 .place-large-13 {
+  margin-left: 1405px;
+}
+.scale-1 .place-large-14 {
+  margin-left: 1835px;
+}
+
+.scale-2 {
+  width: 5760px;
+  height: 760px;
+  background-image: url("../img/шкалы/2.png");
+}
+.scale-2 .place-small-1 {
+  margin-left: 866px;
+}
+.scale-2 .place-small-2 {
+  margin-left: 281px;
+}
+.scale-2 .place-small-3 {
+  margin-left: 685px;
+}
+.scale-2 .place-small-4 {
+  margin-left: 457px;
+}
+.scale-2 .place-small-5 {
+  margin-left: 114px;
+}
+.scale-2 .place-small-6 {
+  margin-left: 398px;
+}
+.scale-2 .place-small-7 {
+  margin-left: 635px;
+}
+.scale-2 .place-large-1 {
+  margin-left: 387px;
+}
+.scale-2 .place-large-2 {
+  margin-left: 2px;
+}
+.scale-2 .place-large-3 {
+  margin-left: 52px;
+}
+.scale-2 .place-large-4 {
+  margin-left: 389px;
+}
+.scale-2 .place-large-5 {
+  margin-left: 123px;
+}
+.scale-2 .place-large-6 {
+  margin-left: 47px;
+}
+.scale-2 .place-large-7 {
+  margin-left: 193px;
+}
+.scale-2 .place-large-8 {
+  margin-left: 238px;
+}
+.scale-2 .place-large-9 {
+  margin-left: 1197px;
+}
+.scale-2 .place-large-10 {
+  margin-left: 47px;
+}
+.scale-2 .place-large-11 {
+  margin-left: 166px;
+}
+.scale-2 .place-large-12 {
+  margin-left: 458px;
+}
+.scale-2 .place-large-13 {
+  margin-left: 855px;
+}
+.scale-2 .place-large-14 {
+  margin-left: 1189px;
+}
+.scale-2 .place-large-15 {
+  margin-left: 1217px;
+}
+.scale-2 .place-large-16 {
+  margin-left: 19px;
+}
+
+.scale-3 {
+  width: 3840px;
+  height: 760px;
+  background-image: url("../img/шкалы/3.png");
+}
+.scale-3 .place-small-1 {
+  margin-left: 53px;
+}
+.scale-3 .place-small-2 {
+  margin-left: 110px;
+}
+.scale-3 .place-small-3 {
+  margin-left: 94px;
+}
+.scale-3 .place-small-4 {
+  margin-left: 68px;
+}
+.scale-3 .place-small-5 {
+  margin-left: 4px;
+  width: 219px;
+}
+.scale-3 .place-small-6 {
+  margin-left: 11px;
+}
+.scale-3 .place-small-7 {
+  margin-left: 7px;
+}
+.scale-3 .place-small-8 {
+  margin-left: 309px;
+}
+.scale-3 .place-small-9 {
+  margin-left: 524px;
+}
+.scale-3 .place-large-1 {
+  margin-left: 2px;
+}
+.scale-3 .place-large-2 {
+  margin-left: 597px;
+}
+.scale-3 .place-large-3 {
+  margin-left: 21px;
+}
+.scale-3 .place-large-4 {
+  margin-left: 123px;
+}
+.scale-3 .place-large-5 {
+  margin-left: 201px;
+}
+.scale-3 .place-large-6 {
+  margin-left: 17px;
+}
+.scale-3 .place-large-7 {
+  margin-left: 42px;
+}
+.scale-3 .place-large-8 {
+  margin-left: 71px;
+}
+.scale-3 .place-large-9 {
+  margin-left: 75px;
+}
+.scale-3 .place-large-10 {
+  margin-left: 3px;
+}
+.scale-3 .place-large-11 {
+  margin-left: 0px;
+}
+.scale-3 .place-large-12 {
+  margin-left: 280px;
+}
+.scale-3 .place-large-13 {
+  margin-left: 215px;
+}
+.scale-3 .place-large-14 {
+  margin-left: 304px;
+}
+.scale-3 .place-large-15 {
+  margin-left: 272px;
+}
+.scale-3 .place-large-16 {
+  margin-left: 533px;
+}
+.scale-3 .place-large-17 {
+  margin-left: 75px;
+}
+
+.set-of-images {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  max-width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  overflow-x: hidden;
+}
+
+.image-spawn {
+  margin: 0 3px;
+  transition: width 0.2s linear, margin 0.2s linear;
+}
+.image-spawn > img {
+  cursor: pointer !important;
+}
+.image-spawn-small {
+  width: 263px;
+  height: 170px;
+}
+.image-spawn-large {
+  width: 262px;
+  height: 238px;
+}
