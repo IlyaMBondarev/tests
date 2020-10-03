@@ -84,12 +84,12 @@ body::-webkit-scrollbar {
 
 .score {
   position: fixed;
-  top: 30px;
-  right: 30px;
-  width: 100px;
-  height: 100px;
+  top: 1.5vw;
+  right: 1.5vw;
+  width: 5vw;
+  height: 5vw;
   z-index: 50;
-  font-size: 45px;
+  font-size: 2.27vw;
   font-weight: bold;
   border: 3px solid red;
   border-radius: 50%;
@@ -103,11 +103,11 @@ body::-webkit-scrollbar {
   display: flex;
 }
 .row-small {
-  margin-bottom: 61px;
+  margin-bottom: 3vw;
   padding-top: 1px;
 }
 .row-large {
-  margin-top: 28px;
+  margin-top: 1.4vw;
 }
 
 .scale {
@@ -132,62 +132,63 @@ body::-webkit-scrollbar {
 }
 
 .scale-1 {
-  width: 3840px;
-  height: 760px;
+  width: 194vw;
+  height: 38.4vw;
+  background-image: url("../img/шкалы/1.png");
 }
 .scale-1 .place-small-1 {
-  margin-left: 1.8vw;
+  margin-left: 1.9vw;
 }
 .scale-1 .place-small-2 {
-  margin-left: 34.4vw;
+  margin-left: 34.5vw;
 }
 .scale-1 .place-small-3 {
-  margin-left: 5.3vw;
+  margin-left: 5.4vw;
 }
 .scale-1 .place-small-4 {
-  margin-left: 0vw;
+  margin-left: 0;
 }
 .scale-1 .place-small-5 {
-  margin-left: 1.8vw;
+  margin-left: 18.3vw;
 }
 .scale-1 .place-small-6 {
-  margin-left: 33.1vw;
+  margin-left: 33.2vw;
 }
 .scale-1 .place-large-1 {
-  margin-left: 0vw;
+  margin-left: 0;
 }
 .scale-1 .place-large-2 {
-  margin-left: 0.1vw;
+  margin-left: 0.3vw;
 }
 .scale-1 .place-large-3 {
-  margin-left: 0.1vw;
+  margin-left: 0.2vw;
 }
 .scale-1 .place-large-4 {
-  margin-left: 13.6vw;
+  margin-left: 13.8vw;
 }
 .scale-1 .place-large-5 {
-  margin-left: 14.8vw;
+  margin-left: 14.9vw;
 }
 .scale-1 .place-large-6 {
-  margin-left: 0.05vw;
+  margin-left: 0.2vw;
 }
 .scale-1 .place-large-7 {
-  margin-left: 0.05vw;
+  margin-left: 0.2vw;
 }
 .scale-1 .place-large-8 {
-  margin-left: 0.2vw;
+  margin-left: 0.4vw;
 }
 .scale-1 .place-large-9 {
-  margin-left: 0.2vw;
+  margin-left: 0.3vw;
 }
 .scale-1 .place-large-10 {
-  margin-left: 0.15vw;
+  margin-left: 0.3vw;
 }
 .scale-1 .place-large-11 {
-  margin-left: 0.25vw;
+  margin-left: 0.4vw;
 }
 .scale-1 .place-large-12 {
-  margin-left: 0.56vw;
+  margin-left: 0.7vw;
 }
 .scale-1 .place-large-13 {
   margin-left: 71vw;
