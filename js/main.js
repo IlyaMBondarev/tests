@@ -148,10 +148,10 @@ document.addEventListener("drop", function(event) {
         dragged.parentNode.removeChild(dragged);
         event.target.appendChild(dragged);
         if (dragged.dataset.answer === dragged.parentNode.dataset.answer) {
-            score.textContent = +(score.textContent) + 2;
+            score.textContent = +(score.textContent) + 2 - dragged.dataset.penalty;
             dragged.draggable = false;
-        } else if (!(dragged.classList.contains('was-wrong'))) {
-            dragged.classList.add('was-wrong');
+        } else {
+            dragged.dataset.penalty = dragged.dataset.penalty === '2' ? '2' : `${+(dragged.dataset.penalty) + 1}`;
             score.textContent = +(score.textContent) - 1;
         }
     } else if (!(event.target.classList.contains('place')) && !(event.target.parentNode.classList.contains('place'))) {
