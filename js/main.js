@@ -11,6 +11,7 @@ scale.addEventListener("wheel", onWheel);
 setOfImages.addEventListener("wheel", onWheel);
 
 function onWheel(event) {
+    event.preventDefault();
     dir = event.deltaY > 0 ? 1 : -1;
     isOkToScroll = true;
     target = this;
@@ -59,11 +60,8 @@ document.addEventListener('mousemove', (event) => {
     }
 })
 
-
 document.addEventListener('mouseup', (event) => {
-    if (!(event.target.draggable)) {
-        isOkToMove = false;
-    }
+    isOkToMove = false;
 })
 
 

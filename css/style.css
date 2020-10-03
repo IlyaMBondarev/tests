@@ -71,6 +71,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
   overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
 
 .wrapper, .page {
   height: 100%;
@@ -110,6 +114,7 @@ body {
   background-position: top left;
   background-size: 100%;
   background-repeat: no-repeat;
+  margin-bottom: 245px;
 }
 
 .place {
