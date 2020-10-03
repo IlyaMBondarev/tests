@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  min-width: 1980px;
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
@@ -114,7 +115,7 @@ body::-webkit-scrollbar {
   background-position: top left;
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-bottom: 245px;
+  margin-bottom: 175px;
 }
 
 .place {
@@ -123,11 +124,11 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 .place-small {
-  width: 265px;
+  width: 263px;
   height: 172px;
 }
 .place-large {
-  width: 264px;
+  width: 262px;
   height: 240px;
 }
 
