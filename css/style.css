@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
   z-index: 50;
   font-size: 2.27vw;
   font-weight: bold;
-  border: 3px solid red;
+  border: 0.15vw solid red;
   border-radius: 50%;
   background-color: #ffffff;
   display: flex;
@@ -118,6 +118,7 @@ body::-webkit-scrollbar {
 
 .place {
   border: 1px solid black;
+  background-color: rgba(15, 155, 155, 0.3);
   overflow: hidden;
 }
 .place-small, .place-small > img {
@@ -195,163 +196,246 @@ body::-webkit-scrollbar {
 }
 
 .scale-2 {
-  width: 5760px;
-  height: 760px;
-  background-image: url("../img/шкалы/2.png");
+  width: 291vw;
+  height: 38.4vw;
 }
 .scale-2 .place-small-1 {
-  margin-left: 866px;
+  margin-left: 43.8vw;
 }
 .scale-2 .place-small-2 {
-  margin-left: 281px;
+  margin-left: 14.2vw;
 }
 .scale-2 .place-small-3 {
-  margin-left: 685px;
+  margin-left: 34.8vw;
 }
 .scale-2 .place-small-4 {
-  margin-left: 457px;
+  margin-left: 23.2vw;
 }
 .scale-2 .place-small-5 {
-  margin-left: 114px;
+  margin-left: 5.9vw;
 }
 .scale-2 .place-small-6 {
-  margin-left: 398px;
+  margin-left: 20.1vw;
 }
 .scale-2 .place-small-7 {
-  margin-left: 635px;
+  margin-left: 32.1vw;
 }
 .scale-2 .place-large-1 {
-  margin-left: 387px;
+  margin-left: 19.6vw;
 }
 .scale-2 .place-large-2 {
-  margin-left: 2px;
+  margin-left: 0.2vw;
 }
 .scale-2 .place-large-3 {
-  margin-left: 52px;
+  margin-left: 2.8vw;
 }
 .scale-2 .place-large-4 {
-  margin-left: 389px;
+  margin-left: 19.8vw;
 }
 .scale-2 .place-large-5 {
-  margin-left: 123px;
+  margin-left: 6.3vw;
 }
 .scale-2 .place-large-6 {
-  margin-left: 47px;
+  margin-left: 2.6vw;
 }
 .scale-2 .place-large-7 {
-  margin-left: 193px;
+  margin-left: 9.9vw;
 }
 .scale-2 .place-large-8 {
-  margin-left: 238px;
+  margin-left: 12.2vw;
 }
 .scale-2 .place-large-9 {
-  margin-left: 1197px;
+  margin-left: 60.6vw;
 }
 .scale-2 .place-large-10 {
-  margin-left: 47px;
+  margin-left: 2.4vw;
 }
 .scale-2 .place-large-11 {
-  margin-left: 166px;
+  margin-left: 8.5vw;
 }
 .scale-2 .place-large-12 {
-  margin-left: 458px;
+  margin-left: 23.3vw;
 }
 .scale-2 .place-large-13 {
-  margin-left: 855px;
+  margin-left: 43.3vw;
 }
 .scale-2 .place-large-14 {
-  margin-left: 1189px;
+  margin-left: 60.2vw;
 }
 .scale-2 .place-large-15 {
-  margin-left: 1217px;
+  margin-left: 61.7vw;
 }
 .scale-2 .place-large-16 {
-  margin-left: 19px;
+  margin-left: 1vw;
 }
 
 .scale-3 {
-  width: 3840px;
-  height: 760px;
-  background-image: url("../img/шкалы/3.png");
+  width: 194vw;
+  height: 38.4vw;
 }
 .scale-3 .place-small-1 {
-  margin-left: 53px;
+  margin-left: 2.68vw;
 }
 .scale-3 .place-small-2 {
-  margin-left: 110px;
+  margin-left: 5.76vw;
 }
 .scale-3 .place-small-3 {
-  margin-left: 94px;
+  margin-left: 4.75vw;
 }
 .scale-3 .place-small-4 {
-  margin-left: 68px;
+  margin-left: 3.53vw;
 }
 .scale-3 .place-small-5 {
-  margin-left: 4px;
-  width: 219px;
+  margin-left: 0.3vw;
+  width: 11.06vw;
 }
 .scale-3 .place-small-6 {
-  margin-left: 11px;
+  margin-left: 0.56vw;
 }
 .scale-3 .place-small-7 {
-  margin-left: 7px;
+  margin-left: 0.35vw;
 }
 .scale-3 .place-small-8 {
-  margin-left: 309px;
+  margin-left: 15.8vw;
 }
 .scale-3 .place-small-9 {
-  margin-left: 524px;
+  margin-left: 26.5vw;
 }
 .scale-3 .place-large-1 {
-  margin-left: 2px;
+  margin-left: 0.1vw;
 }
 .scale-3 .place-large-2 {
-  margin-left: 597px;
+  margin-left: 30.2vw;
 }
 .scale-3 .place-large-3 {
-  margin-left: 21px;
+  margin-left: 1.25vw;
 }
 .scale-3 .place-large-4 {
-  margin-left: 123px;
+  margin-left: 6.36vw;
 }
 .scale-3 .place-large-5 {
-  margin-left: 201px;
+  margin-left: 10.3vw;
 }
 .scale-3 .place-large-6 {
-  margin-left: 17px;
+  margin-left: 1.15vw;
 }
 .scale-3 .place-large-7 {
-  margin-left: 42px;
+  margin-left: 2.12vw;
 }
 .scale-3 .place-large-8 {
-  margin-left: 71px;
+  margin-left: 3.69vw;
 }
 .scale-3 .place-large-9 {
-  margin-left: 75px;
+  margin-left: 3.95vw;
 }
 .scale-3 .place-large-10 {
-  margin-left: 3px;
+  margin-left: 0.15vw;
 }
 .scale-3 .place-large-11 {
-  margin-left: 0px;
+  margin-left: 0;
 }
 .scale-3 .place-large-12 {
-  margin-left: 280px;
+  margin-left: 14.2vw;
 }
 .scale-3 .place-large-13 {
-  margin-left: 215px;
+  margin-left: 11.1vw;
 }
 .scale-3 .place-large-14 {
-  margin-left: 304px;
+  margin-left: 15.5vw;
 }
 .scale-3 .place-large-15 {
-  margin-left: 272px;
+  margin-left: 13.95vw;
 }
 .scale-3 .place-large-16 {
-  margin-left: 533px;
+  margin-left: 27vw;
 }
 .scale-3 .place-large-17 {
-  margin-left: 75px;
+  margin-left: 4vw;
+}
+
+.scale-4 {
+  width: 194vw;
+  height: 38.4vw;
+  background-image: url("../img/шкалы/4.png");
+}
+.scale-4 .place-small-1 {
+  margin-left: 2.68vw;
+}
+.scale-4 .place-small-2 {
+  margin-left: 5.76vw;
+}
+.scale-4 .place-small-3 {
+  margin-left: 4.75vw;
+}
+.scale-4 .place-small-4 {
+  margin-left: 3.53vw;
+}
+.scale-4 .place-small-5 {
+  margin-left: 0.3vw;
+  width: 11.06vw;
+}
+.scale-4 .place-small-6 {
+  margin-left: 0.56vw;
+}
+.scale-4 .place-small-7 {
+  margin-left: 0.35vw;
+}
+.scale-4 .place-small-8 {
+  margin-left: 15.8vw;
+}
+.scale-4 .place-small-9 {
+  margin-left: 26.5vw;
+}
+.scale-4 .place-large-1 {
+  margin-left: 0.1vw;
+}
+.scale-4 .place-large-2 {
+  margin-left: 30.2vw;
+}
+.scale-4 .place-large-3 {
+  margin-left: 1.25vw;
+}
+.scale-4 .place-large-4 {
+  margin-left: 6.36vw;
+}
+.scale-4 .place-large-5 {
+  margin-left: 10.3vw;
+}
+.scale-4 .place-large-6 {
+  margin-left: 1.15vw;
+}
+.scale-4 .place-large-7 {
+  margin-left: 2.12vw;
+}
+.scale-4 .place-large-8 {
+  margin-left: 3.69vw;
+}
+.scale-4 .place-large-9 {
+  margin-left: 3.95vw;
+}
+.scale-4 .place-large-10 {
+  margin-left: 0.15vw;
+}
+.scale-4 .place-large-11 {
+  margin-left: 0;
+}
+.scale-4 .place-large-12 {
+  margin-left: 14.2vw;
+}
+.scale-4 .place-large-13 {
+  margin-left: 11.1vw;
+}
+.scale-4 .place-large-14 {
+  margin-left: 15.5vw;
+}
+.scale-4 .place-large-15 {
+  margin-left: 13.95vw;
+}
+.scale-4 .place-large-16 {
+  margin-left: 27vw;
+}
+.scale-4 .place-large-17 {
+  margin-left: 4vw;
 }
 
 .set-of-images {
