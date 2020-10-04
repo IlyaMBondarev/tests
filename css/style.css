@@ -114,12 +114,10 @@ body::-webkit-scrollbar {
   background-position: top left;
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-bottom: 175px;
 }
 
 .place {
   border: 1px solid black;
-  background-color: rgba(15, 155, 155, 0.3);
   overflow: hidden;
 }
 .place-small, .place-small > img {

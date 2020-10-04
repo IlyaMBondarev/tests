@@ -148,11 +148,11 @@ document.addEventListener("drop", function(event) {
         dragged.parentNode.removeChild(dragged);
         event.target.appendChild(dragged);
         if (dragged.dataset.answer === dragged.parentNode.dataset.answer) {
-            score.textContent = +(score.textContent) + 2 - dragged.dataset.penalty;
+            score.textContent = `${+(score.textContent) + 2 - dragged.dataset.penalty}`;
             dragged.draggable = false;
         } else {
-            dragged.dataset.penalty = dragged.dataset.penalty === '2' ? '2' : `${+(dragged.dataset.penalty) + 1}`;
-            score.textContent = +(score.textContent) - 1;
+            dragged.dataset.penalty = '2';
+            score.textContent = `${+(score.textContent) - 1}`;
         }
     } else if (!(event.target.classList.contains('place')) && !(event.target.parentNode.classList.contains('place'))) {
         dragged.parentNode.classList.add('empty');
