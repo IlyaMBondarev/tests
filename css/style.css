@@ -107,12 +107,17 @@ body::-webkit-scrollbar {
 }
 
 .drop {
+  z-index: 2;
   position: relative;
   padding: 20px 30px;
 }
 .drop:hover {
   color: #ffffff;
   background-color: #3c56bc;
+}
+.drop:hover > .drop-menu {
+  transition: max-height 0.2s linear;
+  max-height: 300px;
 }
 .drop-menu {
   position: absolute;
@@ -122,10 +127,6 @@ body::-webkit-scrollbar {
   transform: translateX(-50%);
   overflow-y: hidden;
   transition: max-height 0.1s linear;
-}
-.drop-menu.dropped {
-  transition: max-height 0.2s linear;
-  max-height: 300px;
 }
 .drop-menu__horizontal {
   display: flex;
@@ -266,6 +267,28 @@ body::-webkit-scrollbar {
 .info__content {
   font-size: 18px;
   padding-top: 20px;
+}
+
+.header__row {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.2s linear;
+  transform: translateY(-60px);
+}
+.header__row > .nav {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
+}
+.header__row:hover {
+  transform: translateY(0);
+}
+
+.nav-hover {
+  height: 20px;
+  width: 100%;
+  background-color: transparent;
+  opacity: 0;
 }
 
 .score {
