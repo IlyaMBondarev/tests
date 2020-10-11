@@ -82,6 +82,7 @@ body::-webkit-scrollbar {
 }
 
 .main-page__top {
+  position: relative;
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
 }
 .nav__menu {
@@ -167,19 +168,59 @@ body::-webkit-scrollbar {
 
 .main-page__header {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.main-page__header > div {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 30px;
+  top: 50px;
+}
+
+.titles {
+  flex-direction: column;
+  align-items: center;
+}
 
 .title {
+  text-align: center;
   font-size: 48px;
 }
 
 .subtitle {
+  text-align: center;
   font-size: 36px;
   padding-top: 15px;
+}
+
+.toDemo {
+  margin-top: 50px;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  color: lightgoldenrodyellow;
+  border: 2px solid lightgoldenrodyellow;
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 0 rgba(50, 50, 50, 0.75);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s linear;
+}
+.toDemo:hover {
+  box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.75);
+}
+.toDemo:active {
+  box-shadow: -3px -3px 20px rgba(50, 50, 50, 0.75);
 }
 
 .slider {
