@@ -332,6 +332,39 @@ body::-webkit-scrollbar {
   opacity: 0;
 }
 
+.video {
+  margin-top: 70px;
+  max-width: 91.6666666667%;
+  justify-content: center;
+}
+
+.replies {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25%;
+}
+.reply__image {
+  border-radius: 50%;
+  width: 50%;
+}
+.reply__name {
+  padding-top: 20px;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+.reply__content {
+  font-size: 14px;
+}
+
 .score {
   position: fixed;
   top: 1.5vw;
