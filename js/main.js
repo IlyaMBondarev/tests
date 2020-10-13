@@ -76,6 +76,7 @@ score.textContent = '0';
 
 let countScale = 0;
 let indexOfQuestion = 0;
+let wrongSound = new Audio('audio/wrong.mp3');
 
 // иициализация переменной, в которой будут храниться картинки
 let images = [];
@@ -154,6 +155,7 @@ document.addEventListener("drop", function(event) {
                 question(questions[indexOfQuestion]);
             }
         } else {
+            wrongSound.play();
             dragged.dataset.penalty = '2';
             score.textContent = `${+(score.textContent) - 1}`;
         }
@@ -329,6 +331,7 @@ quizSubmit.addEventListener('click', () => {
         } else {
             score.textContent = `${+(score.textContent) - 1}`;
             //неприятный звук
+            wrongSound.play();
         }
     } else if (typeOfAnswer === "table-horizontal") {
         let answerTable = "";
@@ -346,6 +349,7 @@ quizSubmit.addEventListener('click', () => {
         } else {
             score.textContent = `${+(score.textContent) - 1}`;
             //неприятный звук
+            wrongSound.play();
         }
     } else if (typeOfAnswer === "table-vertical") {
         let answerTable = "";
@@ -363,6 +367,7 @@ quizSubmit.addEventListener('click', () => {
         } else {
             score.textContent = `${+(score.textContent) - 1}`;
             //неприятный звук
+            wrongSound.play();
         }
     } else if (typeOfAnswer === "textarea") {
 
