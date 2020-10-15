@@ -2,6 +2,9 @@
 document.querySelector('.wrapper').classList.add('loaded');
 
 
+
+//начало кода для горизонтального скролла. Менять можно, если знаешь точно что за что отвечает или там, где есть комментарии
+
 let list = document.querySelector("body"), dir, i, isOkToScroll, target;
 let scale = document.querySelector('.scale');
 let setOfImages = document.querySelector('.set-of-images');
@@ -27,9 +30,9 @@ function scroll() {
     else setDefault();
 
     if (target === setOfImages) {
-        target.scrollBy(2 * i * dir, 0);
+        target.scrollBy(2 * i * dir, 0);//здесь можно менять цифру. меньше - медленнее скролл, больше - быстрее скролл
     } else {
-        window.scrollBy(2 * i * dir, 0);
+        window.scrollBy(2 * i * dir, 0);//здесь можно менять цифру. меньше - медленнее скролл, больше - быстрее скролл
     }
 }
 
@@ -64,6 +67,10 @@ document.addEventListener('mouseup', (event) => {
     isOkToMove = false;
 })
 
+//конец кода для горизонтального скролла
+
+
+//начало кода про шкалу
 
 // первоначальные места картинок
 let imageSpawns = document.querySelectorAll('.image-spawn');
@@ -72,11 +79,15 @@ let imageSpawnsLarge = document.querySelectorAll('.image-spawn-large');
 
 // баллы
 let score = document.querySelector('.score');
+//изначльное количество баллов
 score.textContent = '0';
 
+//начальная позиция при открытии страницы
 let countScale = 0;
 let indexOfQuestion = 0;
-let wrongSound = new Audio('audio/wrong.mp3');
+
+//звук при неправильном движении
+let wrongSound = new Audio('audio/wrong.mp3');//если нижен другой файл - просто поменять путь до файла и/или название файла.
 
 // иициализация переменной, в которой будут храниться картинки
 let images = [];
@@ -90,97 +101,100 @@ imageSpawns.forEach(spawn => {
 imageSpawnsSmall.forEach(spawn => imagesSmall.push(spawn.querySelector('img')));
 imageSpawnsLarge.forEach(spawn => imagesLarge.push(spawn.querySelector('img')));
 
-
+//код про движение картинки
 //картинка начинает движение
 var dragged;
 
-/* events fired on the draggable target */
 document.addEventListener("drag", function(event) {
 
 }, false);
 
 document.addEventListener("dragstart", function(event) {
-    // store a ref. on the dragged elem
     dragged = event.target;
 }, false);
 
 document.addEventListener("dragend", function(event) {
-    // reset the transparency
     event.target.style.opacity = "";
 }, false);
 
-/* events fired on the drop targets */
 document.addEventListener("dragover", function(event) {
-    // prevent default to allow drop
     event.preventDefault();
 }, false);
 
 document.addEventListener("dragenter", function(event) {
-    // highlight potential drop target when the draggable element enters it
-    if (event.target.classList.contains("place")) {
-
-    }
 
 }, false);
 
 document.addEventListener("dragleave", function(event) {
-    // reset background of potential drop target when the draggable element leaves it
-    if (event.target.classList.contains("place")) {
-
-    }
 
 }, false);
 
 document.addEventListener("drop", function(event) {
-    // prevent default action (open as link for some elements)
+    //код про то, что происходит, когда картинка приземляется куда-либо
+
+    //предотвратить стандартное поведение
     event.preventDefault();
-    // move dragged elem to the selected drop target
+
+    //если картинка падает в место для картинки, оно пустое и картинка по месту совпадает (из первой строки или остальных)
     if (event.target.classList.contains("place") && event.target.classList.contains("empty") && event.target.dataset.place === dragged.dataset.place) {
+        //если картинка перемещалась из нижней строки
         if (dragged.parentNode.classList.contains('image-spawn')) {
+            //скрыть уже пустующее место в нижней строке
             dragged.parentNode.style.width = '0px';
             dragged.parentNode.style.margin = '0px';
         } else {
+            //иначе если перемещается из места на шкале, доабавлять предыдущему месту класс "пустой"
             dragged.parentNode.classList.add('empty');
         }
+        //убрать текущему месту класс "пустой"
         event.target.classList.remove('empty');
+        //убрать перемещаемый объект из кода в предыдущем месте и добавить в текущем
         dragged.parentNode.removeChild(dragged);
         event.target.appendChild(dragged);
+        //если ответ правильный
         if (dragged.dataset.answer === dragged.parentNode.dataset.answer) {
+            //добавить баллы минус штраф
             score.textContent = `${+(score.textContent) + 2 - dragged.dataset.penalty}`;
+            //сделать картинку неперемещаемой
             dragged.draggable = false;
+            //количество правильных ответов + 1
             countScale++;
+            //если количество правильных ответов равно количеству картинок (все картинки на своих местах)
             if (countScale === images.length) {
+                //скрыть шкалу, запустить первый вопрос
                 scale.style.display = "none";
                 setOfImages.style.display = "none";
-                question(questions[indexOfQuestion]);
+                //если первый вопрос есть, запустить его
+                if (questions.length !== 0) {
+                    question(questions[indexOfQuestion]);
+                }
             }
-        } else {
+        } else {//если вопрос неправильный
+            //включить звук
             wrongSound.play();
+            //увеличить штраф
             dragged.dataset.penalty = '2';
+            //уменьшить текущие баллы
             score.textContent = `${+(score.textContent) - 1}`;
         }
+        //если перемещается из шкалы в место не для картинки
     } else if (!(event.target.classList.contains('place')) && !(event.target.parentNode.classList.contains('place'))) {
+        //добавить предыдущему месту класс "пустой" и удалить картинку оттуда
         dragged.parentNode.classList.add('empty');
         dragged.parentNode.removeChild(dragged);
+        //вернуть картинку на ее начальное место в нижней полосе
         imageSpawns[+(dragged.dataset.startplace) - 1].style.width = '';
         imageSpawns[+(dragged.dataset.startplace) - 1].style.margin = '';
         imageSpawns[+(dragged.dataset.startplace) - 1].appendChild(dragged);
     }
 }, false);
 
+//конец кода про шкалу
 
 
+//начало кода про вопросы
 
-
-
-
-
-
-
-
-
-
-
+//выборка блоков из html
 let typeOfAnswer = "";
 let isHelperUsed = false;
 
@@ -208,17 +222,22 @@ let quizRightAnswerTextBlock = quizRightAnswer.querySelector('.quiz__right-answe
 let quizRightAnswerText = quizRightAnswer.querySelector('.quiz__right-answer-text');
 let quizRightAnswerTableHorizontal = quizRightAnswer.querySelector('.quiz__right-answer-table-horizontal');
 let quizRightAnswerTableVertical = quizRightAnswer.querySelector('.quiz__right-answer-table-vertical');
+let quizRightAnswerTextarea = quizAnswer.querySelector('.quiz__right-answer-textarea');
 
+
+//функция инициализации вопроса
 function question(question) {
-
+    //добавить текст вопроса на страницу
     let questionText = "";
     question.question.forEach(paragraph => {
         questionText += "<p>" + paragraph + "</p>";
     })
     quizQuestion.innerHTML = questionText;
 
+    //добавить картинку если есть
     quizImage.src = question.imageSrc;
 
+    //добавить таблицу в текст вопроса
     if (question.table) {
         let quizTableText = "";
         question.tableLeft.forEach(paragraph => {
@@ -233,14 +252,18 @@ function question(question) {
         quizTable.style.display = "flex";
     }
 
+    //чтение типа ответа
+    //если тип ответа "текст"
     if (question.typeOfAnswer === "text") {
+        //показать тип ответа "строка"
         quizAnswerTextBlock.style.display = "flex";
         quizRightAnswerTextBlock.style.display = "flex";
         typeOfAnswer = question.typeOfAnswer;
-
+        //если тип ответа "горизонтальная таблица"
     } else if (question.typeOfAnswer === "table-horizontal") {
         quizAnswerTableHorizontal.style.display = "block";
         quizRightAnswerTableHorizontal.style.display = "block";
+        //рисование кода таблицы для ответов
         let alphabet = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ";
         let tableTr = "<p>Ваш ответ:</p><table><tr>";
         let tableInner = "";
@@ -256,6 +279,7 @@ function question(question) {
         tableTr += "</tr></table>";
         tableInner += tableTr;
         quizAnswerTableHorizontal.innerHTML = tableInner;
+        //рисование кода таблицы для правильного ответа
         tableTr = "<p>Правильный ответ:</p><table><tr>";
         tableInner = "";
         for (let i = 0; i < question.columns; i++) {
@@ -271,9 +295,11 @@ function question(question) {
         tableInner += tableTr;
         quizRightAnswerTableHorizontal.innerHTML = tableInner;
         typeOfAnswer = question.typeOfAnswer;
+        //если тип ответа "вертикальная таблица"
     } else if (question.typeOfAnswer === "table-vertical") {
         quizAnswerTableVertical.style.display = "block";
         quizRightAnswerTableVertical.style.display = "block";
+        //рисование кода таблицы для ответов
         let alphabet = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ";
         let tableInner = "<p>Ваш ответ:</p><table><tr><td>" + question.nameOfLeftColumn + "</td><td>" + question.nameOfRightColumn + "</td></tr>";
         for (let i = 0; i < question.rows; i++) {
@@ -281,6 +307,7 @@ function question(question) {
         }
         tableInner += "</table>";
         quizAnswerTableVertical.innerHTML = tableInner;
+        //рисование кода таблицы для правильного ответа
         tableInner = "<p>Правильный ответ:</p><table><tr><td>" + question.nameOfLeftColumn + "</td><td>" + question.nameOfRightColumn + "</td></tr>";
         for (let i = 0; i < question.rows; i++) {
             tableInner += "<tr><td>" + alphabet[i] + "</td><td><span>" + question.answer[i] + "</span></td></tr>";
@@ -288,28 +315,41 @@ function question(question) {
         tableInner += "</table>";
         quizRightAnswerTableVertical.innerHTML = tableInner;
         typeOfAnswer = question.typeOfAnswer;
+        //если тип ответа "текстовая область"
     } else if (question.typeOfAnswer === "textarea") {
+        //рисование кода таблицы для текстовой области
         quizAnswerTextareaBlock.style.display = "flex";
+        let answerTextarea = "";
+        question.answerTextarea.forEach(paragraph => {
+            answerTextarea += "<p>" + paragraph + "</p>";
+        })
+        quizRightAnswerTextarea.innerHTML += answerTextarea;
         typeOfAnswer = question.typeOfAnswer;
     } else {
-        console.error('Тип вопроса неправильный');
+        //если тип ответа был написан неверно, выводит в консоль разработчика сообщение об ошибке
+        console.error('Тип ответа неправильный');
     }
 
+    //если нужны советники
     if (question.countHelpers) {
+        //нарисовать кнопки
         let helpersInner = "";
         for (let i = 0; i < question.countHelpers; i++) {
             helpersInner += "<button class=\"helper-btn\">Советник <span>" + (i + 1) + "</span></button>";
         }
         helpers.innerHTML = helpersInner;
+        //добавить каждой кнопке действие при клике
         for (let i = 0; i < question.countHelpers; i++) {
             let helperBtns = helpers.querySelectorAll('button');
             helperBtns[i].addEventListener('click', () => {
+                //вывод на экран совета поверх страницы
                 alert(`${question.helpers[i]}`);
+                //советник использован
                 isHelperUsed = true;
             })
         }
     }
-
+    //после отрисовки нужной информации на странице, наконец показать вопрос
     quiz.style.display = "block";
     helpers.style.display = "block";
     quizQuestion.style.display = "block";
@@ -317,71 +357,88 @@ function question(question) {
     quizSubmit.style.display = "block";
 }
 
-
+//нажатие на кнопку "отправить"
 quizSubmit.addEventListener('click', () => {
+    //показать ответ, скрыть кнопку "отправить"
     quizRightAnswer.style.display = "block";
     quizSubmit.style.display = "none";
+    //если тип ответа "текст"
     if (typeOfAnswer === "text") {
+        //если ответ правильный (даже с учетом регистра)
         if (quizAnswerText.value.toLowerCase() === quizRightAnswerText.textContent.toLowerCase()) {
-            if (!isHelperUsed) {
+            if (!isHelperUsed) {//если советник не был использован
                 score.textContent = `${+(score.textContent) + 2}`;
-            } else {
+            } else {//если советник был использован
                 score.textContent = `${+(score.textContent) + 1}`;
             }
-        } else {
+        } else {//если ответ неправильный
             score.textContent = `${+(score.textContent) - 1}`;
             //неприятный звук
             wrongSound.play();
         }
+        //если тип ответа "горизонтальная таблица"
     } else if (typeOfAnswer === "table-horizontal") {
+        //проверка ответа
         let answerTable = "";
         let answerInputs = quizAnswerTableHorizontal.querySelectorAll('input');
         answerInputs.forEach(input => answerTable += input.value);
         let rightAnswerTable = "";
         let rightAnswerSpans = quizRightAnswerTableHorizontal.querySelectorAll('span');
         rightAnswerSpans.forEach(span => rightAnswerTable += span.textContent);
+        //если ответ правильный
         if (answerTable.toLowerCase() === rightAnswerTable.toLowerCase()) {
-            if (!isHelperUsed) {
+            if (!isHelperUsed) {//если советник не был использован
                 score.textContent = `${+(score.textContent) + 2}`;
-            } else {
+            } else {//если советник был использован
                 score.textContent = `${+(score.textContent) + 1}`;
             }
-        } else {
+        } else {//если ответ неправильный
             score.textContent = `${+(score.textContent) - 1}`;
             //неприятный звук
             wrongSound.play();
         }
+        //если тип ответа "вертикальная таблица"
     } else if (typeOfAnswer === "table-vertical") {
+        //проверка ответа
         let answerTable = "";
         let answerInputs = quizAnswerTableVertical.querySelectorAll('input');
         answerInputs.forEach(input => answerTable += input.value);
         let rightAnswerTable = "";
         let rightAnswerSpans = quizRightAnswerTableVertical.querySelectorAll('span');
         rightAnswerSpans.forEach(span => rightAnswerTable += span.textContent);
+        //если ответ правильный
         if (answerTable.toLowerCase() === rightAnswerTable.toLowerCase()) {
-            if (!isHelperUsed) {
+            if (!isHelperUsed) {//если советник не был использован
                 score.textContent = `${+(score.textContent) + 2}`;
-            } else {
+            } else {//если советник был использован
                 score.textContent = `${+(score.textContent) + 1}`;
             }
-        } else {
+        } else {//если ответ неправильный
             score.textContent = `${+(score.textContent) - 1}`;
             //неприятный звук
             wrongSound.play();
         }
+        //если тип ответа "текстовая область"
     } else if (typeOfAnswer === "textarea") {
-
+        //показать правильный текст
+        quizRightAnswerTextarea.style.display = "block";
     } else {
-        console.error('Тип вопроса неправильный');
+        //если тип ответа неправильный, выводит в консоль ошибку
+        console.error('Тип ответа неправильный');
     }
+    //если вопрос не последний
     if (indexOfQuestion !== questions.length - 1) {
+        //показать кнопку к следующему вопросу
         quizNext.style.display = "table";
-    } else {
+    } else {//если вопрос последний
+        //показать кнопку на следующий тест/страницу с результатом
         quizNextPage.style.display = "table";
     }
 })
 
+//если нажать на кнопку "далее"
 quizNext.addEventListener('click', () => {
+    //скрыть все блоки, стереть все значения
     quizRightAnswer.style.display = "none";
     quizSubmit.style.display = "table";
     quizNext.style.display = "none";
@@ -406,8 +463,10 @@ quizNext.addEventListener('click', () => {
     quizRightAnswerTableHorizontal.innerHTML = "";
     quizRightAnswerTableVertical.style.display = "none";
     quizRightAnswerTableVertical.innerHTML = "";
+    quizRightAnswerTextarea.style.display = "none";
     typeOfAnswer = "";
     isHelperUsed = false;
+    //инициализация следующего вопроса, если еще не последний
     indexOfQuestion++;
     if (indexOfQuestion !== questions.length) {
         question(questions[indexOfQuestion]);

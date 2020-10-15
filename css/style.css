@@ -23,14 +23,9 @@ html, body {
 body {
   line-height: 1;
   font-size: 14px;
-  font-family: "'Lato', sans-serif";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea {
-  font-family: "'Lato', sans-serif";
 }
 
 input::-ms-clear {
@@ -83,7 +78,7 @@ body::-webkit-scrollbar {
 
 .main-page__top {
   position: relative;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc; /* цвет фона верхней части главной страницы и меню */
 }
 .nav__menu {
   display: flex;
@@ -101,12 +96,13 @@ body::-webkit-scrollbar {
 }
 .nav__list > a:hover {
   color: #ffffff;
-  background-color: #3c56bc;
+  background-color: #3c56bc; /* цвет фона кнопки меню при наведении */
 }
 .nav li {
   font-size: 20px;
 }
 
+/* выпадающие меню */
 .drop {
   z-index: 2;
   position: relative;
@@ -114,7 +110,7 @@ body::-webkit-scrollbar {
 }
 .drop:hover {
   color: #ffffff;
-  background-color: #3c56bc;
+  background-color: #3c56bc; /* цвет фона кнопки меню при наведении */
 }
 .drop:hover > .drop-menu {
   transition: max-height 0.2s linear;
@@ -132,7 +128,7 @@ body::-webkit-scrollbar {
 .drop-menu__horizontal {
   display: flex;
   flex-direction: row;
-  background-color: #eeeeee;
+  background-color: #eeeeee; /* цвет фона выпадающего меню кнопки сектора */
 }
 .drop-menu__horizontal > li > a {
   color: #222222;
@@ -142,12 +138,12 @@ body::-webkit-scrollbar {
 }
 .drop-menu__horizontal > li > a:hover {
   color: #ffffff;
-  background-color: #3c56bc;
+  background-color: #3c56bc; /* цвет фона кнопки выпадающего меню сектора */
 }
 .drop-menu__vertical {
   display: flex;
   flex-direction: column;
-  background-color: #dddddd;
+  background-color: #dddddd; /* цвет фона выпадающего меню кнопки поделиться */
 }
 .drop-menu__vertical > li {
   display: inline;
@@ -163,7 +159,7 @@ body::-webkit-scrollbar {
 }
 .drop-menu__vertical > li > a:hover {
   color: #ffffff;
-  background-color: #3c56bc;
+  background-color: #3c56bc; /* цвет фона кнопки выпадающего меню поделиться */
 }
 
 input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
@@ -211,7 +207,7 @@ input[type=number] {
   padding-top: 15px;
 }
 
-.toDemo {
+.toDemo { /* кнопка "пройти тест" */
   margin-top: 50px;
   padding: 15px 40px;
   display: flex;
@@ -232,7 +228,7 @@ input[type=number] {
   box-shadow: -3px -3px 20px rgba(50, 50, 50, 0.75);
 }
 
-.slider {
+.slider { /* слайдер */
   position: relative;
   overflow: hidden;
   max-width: 262px;
@@ -330,7 +326,7 @@ input[type=number] {
   transform: translateY(-60px);
 }
 .header__row > .nav {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc; /* цвет фона выпадающего меню на страницах теста */
 }
 .header__row:hover {
   transform: translateY(0);
@@ -425,7 +421,7 @@ input[type=number] {
   height: 12vw;
 }
 
-.scale-demo {
+.scale-demo { /* места для всех ответов-картинок на демо */
   width: 194vw;
   height: 38.4vw;
 }
@@ -490,7 +486,7 @@ input[type=number] {
   margin-left: 92.7vw;
 }
 
-.scale-1 {
+.scale-1 { /* места для всех ответов-картинок на тесте 1 */
   width: 291vw;
   height: 38.4vw;
 }
@@ -564,7 +560,7 @@ input[type=number] {
   margin-left: 1vw;
 }
 
-.scale-2 {
+.scale-2 { /* места для всех ответов-картинок на тесте 2 */
   width: 194vw;
   height: 38.4vw;
 }
@@ -648,7 +644,7 @@ input[type=number] {
   margin-left: 4vw;
 }
 
-.scale-3 {
+.scale-3 { /* места для всех ответов-картинок на тесте 3 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -745,7 +741,7 @@ input[type=number] {
   margin-left: 59vw;
 }
 
-.scale-4 {
+.scale-4 { /* места для всех ответов-картинок на тесте 4 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -833,7 +829,7 @@ input[type=number] {
   margin-left: 0.2vw;
 }
 
-.scale-5 {
+.scale-5 { /* места для всех ответов-картинок на тесте 5 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -927,7 +923,7 @@ input[type=number] {
   margin-left: 32.1vw;
 }
 
-.scale-6 {
+.scale-6 {  /* места для всех ответов-картинок на тесте 6 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -1011,7 +1007,7 @@ input[type=number] {
   margin-left: 4.2vw;
 }
 
-.scale-7 {
+.scale-7 { /* места для всех ответов-картинок на тесте 7 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -1121,7 +1117,7 @@ input[type=number] {
   margin-left: 8.8vw;
 }
 
-.scale-8 {
+.scale-8 { /* места для всех ответов-картинок на тесте 8 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -1224,7 +1220,7 @@ input[type=number] {
   width: 8.7vw;
 }
 
-.scale-9 {
+.scale-9 { /* места для всех ответов-картинок на тесте 9 */
   width: 194vw;
   height: 40.6vw;
 }
@@ -1357,7 +1353,7 @@ input[type=number] {
   margin-left: 0.35vw;
 }
 
-.scale-10 {
+.scale-10 { /* места для всех ответов-картинок на тесте 10 */
   width: 290.9vw;
   height: 38.9vw;
 }
@@ -1510,7 +1506,7 @@ input[type=number] {
   width: 10.3vw;
 }
 
-.set-of-images {
+.set-of-images { /* нижняя строка с картинками */
   position: fixed;
   left: 0;
   bottom: 0;
@@ -1537,7 +1533,7 @@ input[type=number] {
   height: 12vw;
 }
 
-.quiz {
+.quiz { /* блок для вопросов */
   display: none;
   margin-top: 5vw;
   margin-left: 20vw;
@@ -1707,6 +1703,15 @@ input[type=number] {
   font-size: 20px;
   padding: 10px 30px;
 }
+.quiz__right-answer-textarea {
+  display: none;
+  padding: 10px;
+  flex-grow: 1;
+  border-left: 1px solid blue;
+  overflow: auto;
+  height: 500px;
+  font-size: 20px;
+}
 .quiz__right-answer-table-horizontal {
   display: none;
   margin-top: 20px;
@@ -1752,7 +1757,7 @@ input[type=number] {
   text-align: center;
 }
 
-.helpers {
+.helpers {  /* блок советников */
   position: absolute;
   left: 5vw;
   max-width: 10vw;
@@ -1780,7 +1785,7 @@ input[type=number] {
   color: #ffffff;
 }
 
-.results {
+.results {  /* страница с результатами */
   font-size: 48px;
   text-align: center;
   margin-top: 30px;

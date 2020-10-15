@@ -34,8 +34,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav__list"><a href="#">Отзывы</a></li>
-                        <li class="nav__list"><a href="#">Котакты</a></li>
+                        <li class="nav__list"><a href="#">Отзывы</a></li><!-- вместо # поставить ссылку на отзывы -->
+                        <li class="nav__list"><a href="#">Контакты</a></li><!-- вместо # поставить ссылку на контакты -->
                         <li class="nav__list drop">Поделиться
                             <div class="drop-menu">
                                 <ul class="drop-menu__vertical">
@@ -49,7 +49,7 @@
                     </ul>
                 </nav>
                 <div class="logo">
-                    <a href="index.html"><img src="img/1.png" alt="logo"></a>
+                    <a href="index.html"><img src="img/1.png" alt="logo"></a><!-- вместо img/1.png поставить путь к файлу логотипа -->
                 </div>
                 <div class="main-page__header">
                     <div></div>
@@ -59,20 +59,20 @@
                         <a href="scale1.html" class="toDemo"><span>ПРОЙТИ ТЕСТ</span></a>
                     </div>
                     <div>
-                        <div class="slider">
-                            <div class="slider__slides">
-                                <div class="slider__slide slider__first-slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
-                                <div class="slider__slide"><img src="img/2.png" alt="2"></div>
+                        <div class="slider" style="max-width: 262px"><!-- ВАЖНО! если ширина слайдов на 262 пикселя, нужно указать ширину в кавычках -->
+                            <div class="slider__slides"><!-- слайды. если нужно добавить или убрать слайды - просто копировать или удалить строчку, они все одинаковые кроме первой -->
+                                <div class="slider__slide slider__first-slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к первой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь ко второй картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к третьей картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к четвертой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к пятой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к шестой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к седьмой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к восьмой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к девятой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к десятой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к одиннадцатой картинке слайдера -->
+                                <div class="slider__slide"><img src="img/2.png" alt="2"></div><!-- вместо img/2.png поставить путь к двенадцатой картинке слайдера -->
                             </div>
                             <button class="slider__arrow slider__arrow-left"><i
                                     class="fas fa-chevron-left"></i>
@@ -89,9 +89,10 @@
                 </div>
             </div>
             <div class="main-page__bottom">
-                <div class="info">
-                    <div class="info__block">
-                        <p class="info__title">Заголовок</p>
+                <div class="info"><!-- блок информации -->
+                    <div class="info__block"><!-- первый блок -->
+                        <p class="info__title">Заголовок</p><!-- название -->
+                        <!-- текст в блоке -->
                         <p class="info__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores est
                             exercitationem fuga incidunt ipsum iure, nostrum porro quasi tempora velit. Ipsum laudantium
                             soluta vitae. A alias asperiores, aut commodi consequuntur cupiditate, dignissimos excepturi
@@ -103,8 +104,9 @@
                             eveniet harum illo incidunt maiores nesciunt quae quia voluptatibus?</p>
 
                     </div>
-                    <div class="info__block">
-                        <p class="info__title">Заголовок</p>
+                    <div class="info__block"><!-- второй блок -->
+                        <p class="info__title">Заголовок</p><!-- название -->
+                        <!-- текст в блоке -->
                         <p class="info__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
                             consectetur consequatur dolorem exercitationem illo, ipsam molestias nulla officia officiis
                             optio praesentium, quisquam sit sunt totam ut vero voluptate. Autem delectus, doloremque
@@ -117,8 +119,9 @@
                         </p>
 
                     </div>
-                    <div class="info__block">
-                        <p class="info__title">Заголовок</p>
+                    <div class="info__block"><!-- третий блок -->
+                        <p class="info__title">Заголовок</p><!-- название -->
+                        <!-- текст в блоке -->
                         <p class="info__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
                             doloremque earum eum facilis id maiores molestiae porro quibusdam, quidem reiciendis sint
                             suscipit vel? Aliquid, deleniti dignissimos eaque eveniet excepturi exercitationem hic
@@ -131,23 +134,26 @@
 
                     </div>
                 </div>
-                <div class="video">
+                <div class="video" style="display: none;"> <!-- когда добавится видео, удалить style="display: none;" -->
                     <!-- вставить код видео -->
                 </div>
-                <div class="replies">
-                    <div class="reply">
-                        <img src="img/2.png" alt="1" class="reply__image">
-                        <div class="reply__name">Иван Иванов</div>
+                <div class="replies" style="display: none;"> <!-- когда добавятся отзывы, удалить style="display: none;" -->
+                    <div class="reply"><!-- первый отзыв -->
+                        <img src="img/2.png" alt="1" class="reply__image"><!-- фотография -->
+                        <div class="reply__name">Иван Иванов</div><!-- имя -->
+                        <!-- текст отзыва -->
                         <div class="reply__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores assumenda consequatur cumque debitis, delectus distinctio dolore doloremque est, ex facere fugiat ipsum laborum libero magnam magni nemo nesciunt nihil obcaecati odit pariatur praesentium provident quam quod reiciendis, vel vero. Blanditiis delectus fugiat iste itaque laudantium magnam reprehenderit totam?</div>
                     </div>
-                    <div class="reply">
-                        <img src="img/2.png" alt="1" class="reply__image">
-                        <div class="reply__name">Иван Иванов</div>
+                    <div class="reply"><!-- второй отзыв -->
+                        <img src="img/2.png" alt="1" class="reply__image"><!-- фотография -->
+                        <div class="reply__name">Иван Иванов</div><!-- имя -->
+                        <!-- текст отзыва -->
                         <div class="reply__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores assumenda consequatur cumque debitis, delectus distinctio dolore doloremque est, ex facere fugiat ipsum laborum libero magnam magni nemo nesciunt nihil obcaecati odit pariatur praesentium provident quam quod reiciendis, vel vero. Blanditiis delectus fugiat iste itaque laudantium magnam reprehenderit totam?</div>
                     </div>
-                    <div class="reply">
-                        <img src="img/2.png" alt="1" class="reply__image">
-                        <div class="reply__name">Иван Иванов</div>
+                    <div class="reply"><!-- третий отзыв -->
+                        <img src="img/2.png" alt="1" class="reply__image"><!-- фотография -->
+                        <div class="reply__name">Иван Иванов</div><!-- имя -->
+                        <!-- текст отзыва -->
                         <div class="reply__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium asperiores assumenda consequatur cumque debitis, delectus distinctio dolore doloremque est, ex facere fugiat ipsum laborum libero magnam magni nemo nesciunt nihil obcaecati odit pariatur praesentium provident quam quod reiciendis, vel vero. Blanditiis delectus fugiat iste itaque laudantium magnam reprehenderit totam?</div>
                     </div>
                 </div>

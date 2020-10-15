@@ -11,48 +11,49 @@
 <body>
 <div class="wrapper">
     <main class="page">
-<header class="header">
-    <div class="container">
-        <div class="header__row">
-            <nav class="nav">
-                <ul class="nav__menu">
-                    <li class="nav__list"><a href="index.html">Главная</a></li>
-                    <li class="nav__list"><a href="scale11.html">Демо</a></li>
-                    <li class="nav__list"><a href="scale2.html">Пройти тест</a></li>
-                    <li class="nav__list drop">Сектора
-                        <div class="drop-menu">
-                            <ul class="drop-menu__horizontal">
-                                <li><a href="scale1.html">1 цикл</a></li>
-                                <li><a href="scale2.html">2 цикл</a></li>
-                                <li><a href="scale3.html">3 цикл</a></li>
-                                <li><a href="scale4.html">4 цикл</a></li>
-                                <li><a href="scale5.html">5 цикл</a></li>
-                                <li><a href="scale6.html">6 цикл</a></li>
-                                <li><a href="scale7.html">7 цикл</a></li>
-                                <li><a href="scale8.html">8 цикл</a></li>
-                                <li><a href="scale9.html">9 цикл</a></li>
-                                <li><a href="scale10.html">10 цикл</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__list"><a href="#">Отзывы</a></li>
-                    <li class="nav__list"><a href="#">Котакты</a></li>
-                    <li class="nav__list drop">Поделиться
-                        <div class="drop-menu">
-                            <ul class="drop-menu__vertical">
-                                <li><a href="#"><i class="fab fa-vk"></i><span>ВКонтакте</span></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i>FaceBook</a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
-                                <li><a href="#"><i class="fab fa-viber"></i>Viber</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="nav-hover"></div>
-        </div>
-    </div>
-</header>        <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <nav class="nav">
+                        <ul class="nav__menu">
+                            <li class="nav__list"><a href="index.html">Главная</a></li>
+                            <li class="nav__list"><a href="scaleDemo.html">Демо</a></li>
+                            <li class="nav__list"><a href="scale1.html">Пройти тест</a></li>
+                            <li class="nav__list drop">Сектора
+                                <div class="drop-menu">
+                                    <ul class="drop-menu__horizontal">
+                                        <li><a href="scale1.html">1 цикл</a></li>
+                                        <li><a href="scale2.html">2 цикл</a></li>
+                                        <li><a href="scale3.html">3 цикл</a></li>
+                                        <li><a href="scale4.html">4 цикл</a></li>
+                                        <li><a href="scale5.html">5 цикл</a></li>
+                                        <li><a href="scale6.html">6 цикл</a></li>
+                                        <li><a href="scale7.html">7 цикл</a></li>
+                                        <li><a href="scale8.html">8 цикл</a></li>
+                                        <li><a href="scale9.html">9 цикл</a></li>
+                                        <li><a href="scale10.html">10 цикл</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__list"><a href="#">Отзывы</a></li><!-- вместо # поставить ссылку на отзывы -->
+                            <li class="nav__list"><a href="#">Котакты</a></li><!-- вместо # поставить ссылку на контакты -->
+                            <li class="nav__list drop">Поделиться
+                                <div class="drop-menu">
+                                    <ul class="drop-menu__vertical">
+                                        <li><a href="#"><i class="fab fa-vk"></i><span>ВКонтакте</span></a></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i>FaceBook</a></li>
+                                        <li><a href="#"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+                                        <li><a href="#"><i class="fab fa-viber"></i>Viber</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="nav-hover"></div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
             <div class="score"></div>
             <div class="helpers"></div>
             <div class="quiz">
@@ -66,13 +67,18 @@
                     </tr>
                 </table>
                 <div class="quiz__answer-block">
-                    <label class="quiz__answer"><span class="quiz__answer-title">Ваш ответ:</span><input type="text" class="quiz__answer-text"></label>
+                    <label class="quiz__answer"><span class="quiz__answer-title">Ваш ответ:</span><input type="text"
+                                                                                                         class="quiz__answer-text"></label>
                     <div class="quiz__answer-table-horizontal"></div>
                     <div class="quiz__answer-table-vertical"></div>
-                    <label class="quiz__answer-big"><span class="quiz__answer-title">Ваш ответ:</span><textarea class="quiz__answer-textarea"></textarea></label>
+                    <label class="quiz__answer-big"><span class="quiz__answer-title">Ваш ответ:</span><textarea
+                            class="quiz__answer-textarea"></textarea>
+                        <div class="quiz__right-answer-textarea"></div>
+                    </label>
                 </div>
                 <div class="quiz__right-answer-block">
-                    <p class="quiz__right-answer"><span class="quiz__right-answer-title">Правильный ответ: </span><span class="quiz__right-answer-text">Ответ</span></p>
+                    <p class="quiz__right-answer"><span class="quiz__right-answer-title">Правильный ответ: </span><span
+                            class="quiz__right-answer-text">Ответ</span></p>
                     <div class="quiz__right-answer-table-horizontal"></div>
                     <div class="quiz__right-answer-table-vertical"></div>
                 </div>
@@ -117,38 +123,160 @@
                 </div>
             </div>
             <div class="set-of-images">
-                <div class="image-spawn image-spawn-small image-spawn-1"><img src="img/1.png" alt="1" data-answer="1" data-place="small" data-startPlace="1" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-small image-spawn-2"><img src="img/1.png" alt="1" data-answer="2" data-place="small" data-startPlace="2" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-small image-spawn-3"><img src="img/1.png" alt="1" data-answer="3" data-place="small" data-startPlace="3" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-small image-spawn-4"><img src="img/1.png" alt="1" data-answer="4" data-place="small" data-startPlace="4" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-small image-spawn-5"><img src="img/1.png" alt="2" data-answer="5" data-place="small" data-startPlace="5" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-6"><img src="img/2.png" alt="2" data-answer="1a" data-place="large" data-startPlace="6" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-7"><img src="img/2.png" alt="2" data-answer="2a" data-place="large" data-startPlace="7" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-8"><img src="img/2.png" alt="2" data-answer="3a" data-place="large" data-startPlace="8" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-9"><img src="img/2.png" alt="2" data-answer="4a" data-place="large" data-startPlace="9" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-10"><img src="img/2.png" alt="2" data-answer="5a" data-place="large" data-startPlace="10" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-11"><img src="img/2.png" alt="2" data-answer="6a" data-place="large" data-startPlace="11" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-12"><img src="img/2.png" alt="2" data-answer="7a" data-place="large" data-startPlace="12" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-13"><img src="img/2.png" alt="2" data-answer="8a" data-place="large" data-startPlace="13" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-14"><img src="img/2.png" alt="2" data-answer="9a" data-place="large" data-startPlace="14" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-15"><img src="img/2.png" alt="2" data-answer="10a" data-place="large" data-startPlace="15" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-16"><img src="img/2.png" alt="2" data-answer="11a" data-place="large" data-startPlace="16" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-17"><img src="img/2.png" alt="2" data-answer="12a" data-place="large" data-startPlace="17" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-18"><img src="img/2.png" alt="2" data-answer="13a" data-place="large" data-startPlace="18" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-19"><img src="img/2.png" alt="2" data-answer="14a" data-place="large" data-startPlace="19" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-20"><img src="img/2.png" alt="2" data-answer="15a" data-place="large" data-startPlace="20" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-21"><img src="img/2.png" alt="2" data-answer="16a" data-place="large" data-startPlace="21" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-22"><img src="img/2.png" alt="2" data-answer="17a" data-place="large" data-startPlace="22" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-23"><img src="img/2.png" alt="2" data-answer="18a" data-place="large" data-startPlace="23" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-24"><img src="img/2.png" alt="2" data-answer="19a" data-place="large" data-startPlace="24" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-25"><img src="img/2.png" alt="2" data-answer="20a" data-place="large" data-startPlace="25" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-26"><img src="img/2.png" alt="2" data-answer="21a" data-place="large" data-startPlace="26" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-27"><img src="img/2.png" alt="2" data-answer="22a" data-place="large" data-startPlace="27" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
-                <div class="image-spawn image-spawn-large image-spawn-28"><img src="img/2.png" alt="2" data-answer="23a" data-place="large" data-startPlace="28" data-penalty="0" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+                    <!-- в кавычки data-answer="" поставить номер нужной картинки. если он совпадет, засчитается правильный ответ -->
+
+
+                <div class="image-spawn image-spawn-small image-spawn-1"><img src="img/1.png" alt="1" data-answer="1"
+                                                                              data-place="small" data-startPlace="1"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-small image-spawn-2"><img src="img/1.png" alt="1" data-answer="2"
+                                                                              data-place="small" data-startPlace="2"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-small image-spawn-3"><img src="img/1.png" alt="1" data-answer="3"
+                                                                              data-place="small" data-startPlace="3"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-small image-spawn-4"><img src="img/1.png" alt="1" data-answer="4"
+                                                                              data-place="small" data-startPlace="4"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-small image-spawn-5"><img src="img/1.png" alt="2" data-answer="5"
+                                                                              data-place="small" data-startPlace="5"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-6"><img src="img/2.png" alt="2" data-answer="1a"
+                                                                              data-place="large" data-startPlace="6"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-7"><img src="img/2.png" alt="2" data-answer="2a"
+                                                                              data-place="large" data-startPlace="7"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-8"><img src="img/2.png" alt="2" data-answer="3a"
+                                                                              data-place="large" data-startPlace="8"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-9"><img src="img/2.png" alt="2" data-answer="4a"
+                                                                              data-place="large" data-startPlace="9"
+                                                                              data-penalty="0" draggable="true"
+                                                                              ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-10"><img src="img/2.png" alt="2" data-answer="5a"
+                                                                               data-place="large" data-startPlace="10"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-11"><img src="img/2.png" alt="2" data-answer="6a"
+                                                                               data-place="large" data-startPlace="11"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-12"><img src="img/2.png" alt="2" data-answer="7a"
+                                                                               data-place="large" data-startPlace="12"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-13"><img src="img/2.png" alt="2" data-answer="8a"
+                                                                               data-place="large" data-startPlace="13"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-14"><img src="img/2.png" alt="2" data-answer="9a"
+                                                                               data-place="large" data-startPlace="14"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-15"><img src="img/2.png" alt="2" data-answer="10a"
+                                                                               data-place="large" data-startPlace="15"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-16"><img src="img/2.png" alt="2" data-answer="11a"
+                                                                               data-place="large" data-startPlace="16"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-17"><img src="img/2.png" alt="2" data-answer="12a"
+                                                                               data-place="large" data-startPlace="17"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-18"><img src="img/2.png" alt="2" data-answer="13a"
+                                                                               data-place="large" data-startPlace="18"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-19"><img src="img/2.png" alt="2" data-answer="14a"
+                                                                               data-place="large" data-startPlace="19"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-20"><img src="img/2.png" alt="2" data-answer="15a"
+                                                                               data-place="large" data-startPlace="20"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-21"><img src="img/2.png" alt="2" data-answer="16a"
+                                                                               data-place="large" data-startPlace="21"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-22"><img src="img/2.png" alt="2" data-answer="17a"
+                                                                               data-place="large" data-startPlace="22"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-23"><img src="img/2.png" alt="2" data-answer="18a"
+                                                                               data-place="large" data-startPlace="23"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-24"><img src="img/2.png" alt="2" data-answer="19a"
+                                                                               data-place="large" data-startPlace="24"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-25"><img src="img/2.png" alt="2" data-answer="20a"
+                                                                               data-place="large" data-startPlace="25"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-26"><img src="img/2.png" alt="2" data-answer="21a"
+                                                                               data-place="large" data-startPlace="26"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-27"><img src="img/2.png" alt="2" data-answer="22a"
+                                                                               data-place="large" data-startPlace="27"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
+                <div class="image-spawn image-spawn-large image-spawn-28"><img src="img/2.png" alt="2" data-answer="23a"
+                                                                               data-place="large" data-startPlace="28"
+                                                                               data-penalty="0" draggable="true"
+                                                                               ondragstart="event.dataTransfer.setData('text/plain',null)">
+                </div>
             </div>
         </div>
     </main>
 </div>
+                    <!-- в кавычки data-answer="" поставить номер нужной картинки. если он совпадет, засчитается правильный ответ -->
+
+
 <script src="js/questions5.js"></script>
-<script src="js/main.js"></script></body>
+                    <!-- в кавычки data-answer="" поставить номер нужной картинки. если он совпадет, засчитается правильный ответ -->
+
+
+<script src="js/main.js"></script>
+</body>
 </html>
