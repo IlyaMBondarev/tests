@@ -1835,7 +1835,7 @@ input[type=number] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
 }
 .replies-title {
   font-size: 40px;
@@ -1848,7 +1848,7 @@ input[type=number] {
 .reply {
   width: 30%;
   margin-bottom: 20px;
-  padding: 10px 0;
+  padding: 10px 0 30px 0;
   background-color: #f8f9fb;
 }
 .reply__photo {
