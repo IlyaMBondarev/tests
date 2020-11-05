@@ -87,7 +87,7 @@ let countScale = 0;
 let indexOfQuestion = 0;
 
 //звук при неправильном движении
-let wrongSound = new Audio('audio/wrong.mp3');//если нижен другой файл - просто поменять путь до файла и/или название файла.
+let wrongSound = new Audio('audio/wrong.mp3');//если нужен другой файл - просто поменять путь до файла и/или название файла.
 
 // иициализация переменной, в которой будут храниться картинки
 let images = [];
@@ -472,19 +472,4 @@ quizNext.addEventListener('click', () => {
         question(questions[indexOfQuestion]);
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

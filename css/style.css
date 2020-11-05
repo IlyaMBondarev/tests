@@ -23,9 +23,14 @@ html, body {
 body {
   line-height: 1;
   font-size: 14px;
+  font-family: "'Lato', sans-serif";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: "'Lato', sans-serif";
 }
 
 input::-ms-clear {
@@ -78,7 +83,7 @@ body::-webkit-scrollbar {
 
 .main-page__top {
   position: relative;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc; /* цвет фона верхней части главной страницы и меню */
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
 }
 .nav__menu {
   display: flex;
@@ -96,13 +101,12 @@ body::-webkit-scrollbar {
 }
 .nav__list > a:hover {
   color: #ffffff;
-  background-color: #3c56bc; /* цвет фона кнопки меню при наведении */
+  background-color: #3c56bc;
 }
 .nav li {
   font-size: 20px;
 }
 
-/* выпадающие меню */
 .drop {
   z-index: 2;
   position: relative;
@@ -110,7 +114,7 @@ body::-webkit-scrollbar {
 }
 .drop:hover {
   color: #ffffff;
-  background-color: #3c56bc; /* цвет фона кнопки меню при наведении */
+  background-color: #3c56bc;
 }
 .drop:hover > .drop-menu {
   transition: max-height 0.2s linear;
@@ -128,7 +132,7 @@ body::-webkit-scrollbar {
 .drop-menu__horizontal {
   display: flex;
   flex-direction: row;
-  background-color: #eeeeee; /* цвет фона выпадающего меню кнопки сектора */
+  background-color: #eeeeee;
 }
 .drop-menu__horizontal > li > a {
   color: #222222;
@@ -138,12 +142,12 @@ body::-webkit-scrollbar {
 }
 .drop-menu__horizontal > li > a:hover {
   color: #ffffff;
-  background-color: #3c56bc; /* цвет фона кнопки выпадающего меню сектора */
+  background-color: #3c56bc;
 }
 .drop-menu__vertical {
   display: flex;
   flex-direction: column;
-  background-color: #dddddd; /* цвет фона выпадающего меню кнопки поделиться */
+  background-color: #dddddd;
 }
 .drop-menu__vertical > li {
   display: inline;
@@ -159,7 +163,7 @@ body::-webkit-scrollbar {
 }
 .drop-menu__vertical > li > a:hover {
   color: #ffffff;
-  background-color: #3c56bc; /* цвет фона кнопки выпадающего меню поделиться */
+  background-color: #3c56bc;
 }
 
 input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
@@ -207,7 +211,7 @@ input[type=number] {
   padding-top: 15px;
 }
 
-.toDemo { /* кнопка "пройти тест" */
+.toDemo {
   margin-top: 50px;
   padding: 15px 40px;
   display: flex;
@@ -228,7 +232,7 @@ input[type=number] {
   box-shadow: -3px -3px 20px rgba(50, 50, 50, 0.75);
 }
 
-.slider { /* слайдер */
+.slider {
   position: relative;
   overflow: hidden;
   max-width: 262px;
@@ -326,7 +330,7 @@ input[type=number] {
   transform: translateY(-60px);
 }
 .header__row > .nav {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc; /* цвет фона выпадающего меню на страницах теста */
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
 }
 .header__row:hover {
   transform: translateY(0);
@@ -421,7 +425,7 @@ input[type=number] {
   height: 12vw;
 }
 
-.scale-demo { /* места для всех ответов-картинок на демо */
+.scale-demo {
   width: 194vw;
   height: 38.4vw;
 }
@@ -486,7 +490,7 @@ input[type=number] {
   margin-left: 92.7vw;
 }
 
-.scale-1 { /* места для всех ответов-картинок на тесте 1 */
+.scale-1 {
   width: 291vw;
   height: 38.4vw;
 }
@@ -560,7 +564,7 @@ input[type=number] {
   margin-left: 1vw;
 }
 
-.scale-2 { /* места для всех ответов-картинок на тесте 2 */
+.scale-2 {
   width: 194vw;
   height: 38.4vw;
 }
@@ -644,7 +648,7 @@ input[type=number] {
   margin-left: 4vw;
 }
 
-.scale-3 { /* места для всех ответов-картинок на тесте 3 */
+.scale-3 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -741,7 +745,7 @@ input[type=number] {
   margin-left: 59vw;
 }
 
-.scale-4 { /* места для всех ответов-картинок на тесте 4 */
+.scale-4 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -829,7 +833,7 @@ input[type=number] {
   margin-left: 0.2vw;
 }
 
-.scale-5 { /* места для всех ответов-картинок на тесте 5 */
+.scale-5 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -923,7 +927,7 @@ input[type=number] {
   margin-left: 32.1vw;
 }
 
-.scale-6 {  /* места для всех ответов-картинок на тесте 6 */
+.scale-6 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -1007,7 +1011,7 @@ input[type=number] {
   margin-left: 4.2vw;
 }
 
-.scale-7 { /* места для всех ответов-картинок на тесте 7 */
+.scale-7 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -1117,7 +1121,7 @@ input[type=number] {
   margin-left: 8.8vw;
 }
 
-.scale-8 { /* места для всех ответов-картинок на тесте 8 */
+.scale-8 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -1220,7 +1224,7 @@ input[type=number] {
   width: 8.7vw;
 }
 
-.scale-9 { /* места для всех ответов-картинок на тесте 9 */
+.scale-9 {
   width: 194vw;
   height: 40.6vw;
 }
@@ -1353,7 +1357,7 @@ input[type=number] {
   margin-left: 0.35vw;
 }
 
-.scale-10 { /* места для всех ответов-картинок на тесте 10 */
+.scale-10 {
   width: 290.9vw;
   height: 38.9vw;
 }
@@ -1506,7 +1510,7 @@ input[type=number] {
   width: 10.3vw;
 }
 
-.set-of-images { /* нижняя строка с картинками */
+.set-of-images {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -1533,7 +1537,7 @@ input[type=number] {
   height: 12vw;
 }
 
-.quiz { /* блок для вопросов */
+.quiz {
   display: none;
   margin-top: 5vw;
   margin-left: 20vw;
@@ -1757,7 +1761,7 @@ input[type=number] {
   text-align: center;
 }
 
-.helpers {  /* блок советников */
+.helpers {
   position: absolute;
   left: 5vw;
   max-width: 10vw;
@@ -1785,7 +1789,7 @@ input[type=number] {
   color: #ffffff;
 }
 
-.results {  /* страница с результатами */
+.results {
   font-size: 48px;
   text-align: center;
   margin-top: 30px;
@@ -1800,4 +1804,81 @@ input[type=number] {
   text-align: center;
   width: 80%;
   margin: 0 auto;
+}
+
+.bgMain {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%), #3c56bc;
+}
+
+.contacts {
+  width: 45%;
+  min-width: 300px;
+  margin: 170px auto 0;
+  padding: 30px 40px;
+  border: 2px solid #3c56bc;
+}
+.contacts__title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contacts__content {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.replies {
+  width: 1200px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.replies-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.reply {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background-color: #f8f9fb;
+}
+.reply__photo {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.reply__line {
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.reply__name {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 24px;
+  background-color: #6c757e;
+  border-radius: 51px;
+}
+.reply__content {
+  font-size: 18px;
+  color: #6c757e;
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 10px;
 }
