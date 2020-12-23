@@ -69,7 +69,6 @@ document.addEventListener('mouseup', (event) => {
 
 //конец кода для горизонтального скролла
 
-
 //начало кода про шкалу
 
 // первоначальные места картинок
@@ -188,6 +187,26 @@ document.addEventListener("drop", function(event) {
         imageSpawns[+(dragged.dataset.startplace) - 1].appendChild(dragged);
     }
 }, false);
+
+//для уже решенных блоков теста
+
+let places = scale.querySelectorAll('.place');
+
+document.querySelectorAll('._solved').forEach(image => {
+    let rightPlace;
+    image.parentNode.style.width = '0px';
+    image.parentNode.style.margin = '0px';
+    image.draggable = false;
+    image.parentNode.removeChild(image);
+    for (let i = 0; i < places.length; i++) {
+        if (image.dataset.answer === places[i].dataset.answer) {
+            rightPlace = places[i];
+            break;
+        }
+    }
+    rightPlace.classList.remove('empty');
+    rightPlace.appendChild(image);
+})
 
 //конец кода про шкалу
 
